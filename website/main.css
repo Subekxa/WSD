@@ -1,0 +1,568 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif; 
+    box-sizing: border-box;
+}
+
+
+
+/* NAVBAR */
+nav{
+    height: 80px;
+    /* background: #2c5b79;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0px 50px 0px 100px;
+}  
+
+nav ul{
+    display: flex;
+    list-style: none;
+} 
+
+nav img{
+    width
+    : 100px;
+    height: auto; 
+    padding: 10px; 
+}
+
+nav ul li{
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: rgb(54, 111, 158);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: all 0.3 ease;
+}
+
+nav  ul li a:hover{
+    color:  rgb(31, 65, 75);
+    background: white;
+}
+
+nav ul li.active a{
+    color:  rgb(31, 65, 75);
+    background: white;
+}
+
+nav .menu-btn i{
+    color: rgb(28, 50, 83);
+    font-size: 22px;
+    cursor: pointer;
+    padding: 10px;
+    display: none; 
+} 
+
+#click{
+    display: none;
+}
+
+/* Main page container  */
+.main-contain{
+    background-image: url(/website/Wallpaper4.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 87.5vh;
+}
+
+.text-box{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color:  rgb(31, 65, 75);;
+    margin-top: 20px;
+}
+
+.text-box h1{
+    font-family:"cstmolivia";
+    font-weight: bolder;
+    font-size: 40px;
+    margin-top: 20px;
+    background: transparent;
+}
+
+/* Know more button */
+.btn{
+    text-decoration: none;
+    width: 200px;
+    /* margin: 20px 20px; */
+    padding: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    background-color:  rgb(31, 65, 75);
+}
+
+.btn:hover{
+    color: #38acfa;
+}
+
+/* To make responsive home page */
+@media (max-width: 940px) {
+    nav .menu-btn i{
+        display: block;
+    }
+    #click:checked ~ .menu-btn  i::before{
+        content: "\f00d";
+    }
+    nav ul{
+        position:fixed;
+        top: 80px;
+        left: -100%;
+        background:  black;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    nav ul li{
+        margin: 50px 0;
+    }
+    nav ul li a{
+        font-size: 20px;
+        display: block;
+    }
+    nav  ul li a:hover{
+        color: rgb(31, 65, 75);
+        background: none;
+    }
+    nav ul li.active a{
+        color: rgb(31, 65, 75);
+        background: none;
+    }
+    .Background img{
+        width: 100%;
+        background-size: unset;
+        background-position: none;
+        height: 100vh;
+        display: flex;
+    }
+    .text-box{
+        display: none;
+    }
+}
+
+
+/* LEARNMORE PAGE (KNOW MORE)*/
+/* Image */
+.learn .top img{
+    background-repeat: no-repeat;
+    width: 50%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* H1 */
+.learn .top h1 {
+    font-size: 30px;
+    text-align: center;
+    color:   rgb(31, 65, 75);
+    font-family: "cstmolovia";
+    padding: 20px;
+}
+
+/* Paragraph */
+.top p {
+    text-align: justify;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 10px 10px;
+}
+
+
+ /*    ABOUT US PAGE   */
+/* Youtube link */
+.ytlink {
+    display: flex;
+    justify-content: center;
+}
+
+.contain {
+    margin: auto;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 80%;
+}
+
+.contain .content h3 {
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "cstmolivia";
+    color:rgb(31, 65, 75);   
+}
+
+.contain .content p {
+    padding: 10px;
+    text-align: justify;
+}
+/* Responsive */
+@media (max-width: 940px) {
+    .learn .top img{
+        width: 100%;
+    }
+}
+
+/* Readmore button */
+.contain .button .btn {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: rgb(31, 65, 75);
+    border-radius: 4px;
+}
+
+.contain .button .btn:hover{
+    background-color: rgb(60, 89, 128);
+}
+
+
+/* READMORE PAGE */
+.section-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.section-container .columns{
+    flex:0 0 auto;
+    width:50%;
+}
+
+.section-container h5{
+    color: rgb(52, 94, 110);
+}
+
+.section-container .columns.image{
+    background-position:center;
+    background-size:cover;   
+}
+
+.section-container .columns.content .content-container{
+    padding:40px 50px;
+}
+
+.section-container .columns.content .content-container h5{
+    font-weight:700;
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+.section-container .columns.content .content-container p{
+    font-weight:400;
+    font-size:16px;
+    margin-bottom:20px;
+    margin-bottom:15px;
+    text-align:justify;
+}
+
+/* To make responsive */
+@media screen and (max-width:767px){
+    .section-container{
+        flex-flow: row wrap;
+    }
+    .section-container .columns.image{
+        display:block;
+        /* order:1; */
+        width:100%;
+        height:250px;
+    }
+    .section-container .columns.content{
+        display:block;
+        order:2;
+        width:100%;
+    }
+    .section-container .columns.content .content-container{
+        padding:20px 35px;
+    }
+    .section-container .columns.content .content-container h5{
+        margin-bottom:5px;
+    }
+}
+
+
+
+/*  GALLERY  */
+ /* class name */
+.headtext{
+    text-align: center;
+    color: rgb(31, 65, 75);
+    font-family: "cstmolivia";
+}
+
+.headtext h1{
+    font-size: 40px;
+    font-family: "cstmolivia";
+}
+
+.headtext p{
+    font-family: "cstmolivia";
+    color: rgb(31, 65, 75);
+    font-size: 20px;
+}
+
+.outer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50 30px; 
+    width: 100%;    
+}
+
+.inner-grid {
+    flex: 25%;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.inner-grid img {
+    margin-top: 25px;margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    padding: 10px;
+}
+
+/* To make responsive */
+@media screen and (max-width: 800px) {
+    .inner-grid {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .inner-grid {
+        flex: 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+    .inner-grid img{
+        width: 100%;
+    }
+}
+
+
+/*   PACKAGE PAGE   */
+section{
+    margin: 20px;
+    padding: 0%;
+}
+
+.rooms sec{
+     margin: 20px 0; 
+}
+
+.room{
+    margin: 45px 0;
+    padding-bottom: 25px;
+    background:  #598eaf;;
+    color: white;
+}
+
+.room-text{
+    padding: 5px 20px;
+}
+
+.room-text h3{
+    font-size: 24px;
+}
+
+.room text ul{
+    list-style-type: none;
+    margin: 15px 0;
+}
+
+.rate{
+    opacity: 0.8;
+}
+
+.rate span{
+    font-size: 30px;
+    font-weight: 400;
+    color: rgb(5, 62, 85);
+}
+
+.room-image{
+    overflow: hidden;
+}
+
+.room-image img{
+    transition: var(--transition);
+}
+
+.room-image:hover img{
+    transform: scale(1.1);
+}
+
+/* To make responsive */
+@media (min-width: 900px){
+    .rooms-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .room{
+        flex: 0 0 calc(50% - 20px);
+        margin: 10px;
+    }
+}
+@media(min-width: 1370px){
+    .rooms-container{
+        flex-direction: column;
+    }
+    .room{
+        display: flex;
+        padding-bottom: 0;
+        margin: 5px 0;
+    }
+    .room-image{
+        flex: 1;
+    }
+    .room-image img{
+        height: 100%;
+    }
+    .room-text{
+        flex: 1;
+    }
+   
+}
+
+.book .btton{
+    padding: 6px;
+    color:grey;
+    border-radius: 5px;
+}
+
+
+/*   FOOTER   */
+.footer {
+    display: inline-block;
+    width: 100%;
+    background-color:  #2c5b79;;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    /* z-index: -1; 
+  display: inline-block; */
+}  
+
+/*SOCIAL SITES LINK */
+.social-site i{
+    top: 0px; 
+    font-size: 30px;
+    margin: 3px;
+    padding: 0px 8px;
+    color: rgb(236, 239, 241);
+}
+
+.social-site a:hover {
+    background-color:#093755;;
+    padding: 12px 4px;
+}
+
+.footer-buttom{
+    position: relative;
+} 
+
+
+/* CONTACT US PAGE */
+.contactForm{
+    background:#f1f1f1;
+    width: 25%;
+    position: relative;
+    top: 30px;
+    /* left: 40%; */
+    margin-left: 40%;
+    padding: 30px 40px;
+    border-radius: 8px;
+    line-height: 40px;
+    box-shadow: 0 0 10px #000000b3;   
+    
+} 
+
+.contactForm h2{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #332902;
+} 
+
+.contactForm .input-field{
+    margin-bottom: 10px;
+}
+
+.contactForm .input-field input[type="text"],
+.contactForm textarea{
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    padding: 10px;
+}
+
+.contactForm textarea{
+    resize: none;
+    height: 80px;
+}
+
+/* Contact Form Submit Button */
+.contactForm .buttons input[type="submit"]{
+    border: 0px;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    background: rgb(49, 30, 30);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+} 
+
+#error_message{
+    margin-bottom: 20px;
+    background: skyblue;
+    padding: 0px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .contactForm{
+       padding: 40px;
+       width: 70%;
+       /* margin-bottom: 30px; */
+       /* align-items: center; */
+       right: 25%;
+    }
+}
